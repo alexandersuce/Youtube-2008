@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Youtube 2008" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
+    <script src="script.js"></script>
+    <title>Youtube</title>
+     <header>
+        <a href="index.HTML">Home</a>
+        <a href="https://www.youtube.com/@Flow-streamify">My Videos</a>
+        <a href="https://www.youtube.com/feed/you">My Favourites</a>
+        <a href="https://www.youtube.com/eklvnkjzkprknkjv">My Message</a>
+        <a href="https://www.youtube.com/feed/you">My Profil</a>
+     </header>
+</head>
+<body>
+    <div class="slh">
+     <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dfr%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F%253FthemeRefresh%253D1&hl=fr&ifkv=AdF4I770tPRsgnbFFE1AKcP--citvJjZrZZ6u2U25EgkDCY-2B5YOPgaLEkDgyRHaM5K6cyPL6Xr&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1508986472%3A1721064110106044&ddm=0" class="slh">Sign Up</a>
+     <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dfr%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F%253FthemeRefresh%253D1&hl=fr&ifkv=AdF4I770tPRsgnbFFE1AKcP--citvJjZrZZ6u2U25EgkDCY-2B5YOPgaLEkDgyRHaM5K6cyPL6Xr&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1508986472%3A1721064110106044&ddm=0" class="slh">Log In</a>
+     <a href="https://support.google.com/youtube/?hl=fr#topic=9257498" class="slh">Help</a>
+    </div>
+     <div class="search">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_of_YouTube_%282005-2006%29.svg" class="youtube">
+         <p>Your digital Video repository</p>
+         <input type="text" id="search-bar" class="search-bar">
+         <button onclick="searchVideo()" class="search-button">Search Video</button>
+     
+         <script>
+             function searchVideo() {
+                 const query = document.getElementById('search-bar').value;
+                 if (query) {
+                     const searchUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(query);
+                     window.location.href = searchUrl;
+                 }
+             }
+     
+             // Optional: Allow pressing Enter to trigger search
+             document.getElementById('search-bar').addEventListener('keypress', function(event) {
+                 if (event.key === 'Enter') {
+                     searchVideo();
+                 }
+             });
+         </script>
+     </div>
+
+     <div class="tags">
+         <a href="" class="upload">Upload Your Vidéo</a>
+     </div>
+     <div class="footer">
+        <p class="foot">All right Reserved</p>
+        <a href="#">About Youtube</a>
+        <div class="copyright">
+          © 2024 by Flow
+        </div>
+      </div>
+      
+</html>
